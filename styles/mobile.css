@@ -6,6 +6,12 @@
     font-size: 22px;
 }
 
+.section--feature .tiles ul {}
+.section--feature .tiles li {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+}
 
 
 /* FOOTER */
