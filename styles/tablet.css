@@ -66,6 +66,26 @@ header .toggle.on {
     display: block;
 }
 
+/* VISUAL */
+.section--visual {
+    background-image: url("../img/bg-small.jpg");
+}
+.section--visual .inner {
+    max-width: none;
+    padding: 80px 20px;
+    display: block;
+}
+.section--visual .summary {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+#sign-form {
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 
 /* FOOTER */
 footer .inner {
