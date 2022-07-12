@@ -1,11 +1,18 @@
 @import "reset.css";
 
 .career_container{
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(10,auto);
     column-gap: 10px;
+    row-gap: 10px;
     width: auto;
+    margin: 0 auto;
+}
+
+.career_div {
+    display: grid;
+    margin: 0 auto;
 }
 
 .title_career{
@@ -14,6 +21,7 @@
     background-color: deepskyblue;
     color: white;
     padding: 10px;
+    border-radius: 20px;
 }
 
 .personal_info{
@@ -25,15 +33,10 @@
 }
 
 .jobs{
-    display: grid;
-    grid-template-row: repeat(3,auto);
     width: auto;
 }
 
 .check_box{
-    display: grid;
-    grid-template-row: repeat(2,auto);
-
 }
 
 #first_name, #middle_name, #last_name {
