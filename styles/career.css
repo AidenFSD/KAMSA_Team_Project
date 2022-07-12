@@ -1,3 +1,5 @@
+@import "reset.css";
+
 .career_container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -34,7 +36,7 @@
 
 }
 
-#first_name, #last_name {
+#first_name, #middle_name, #last_name {
     width: auto;
     padding: 5px;
 }
