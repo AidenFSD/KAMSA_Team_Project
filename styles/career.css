@@ -1,48 +1,11 @@
-
-body{
-    background-color: #E8EAF5;
-}
-
-.header{
-    background-color: #1C2379;
-    width: 100%;
-    color : white;
-    font-family: 'Edu NSW ACT Foundation', cursive;
-    font-family: 'Edu SA Beginner', cursive;
-    line-height: 15px;
-    padding: 5px;
-}
-.header > h1{
-    padding-top: 10px;
-    margin: 10px 0px 0px 10px;
-    font-weight: normal;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: left;
-    vertical-align: center;
-
-}
-.header > h4{
-    margin: 10px;
-    font-weght: normal;
-    text-align: left;
-    vertical-align: center;
-}
-
-.main{
-    background-color: white;
-    border: 1px solid green;
-
-}
-.container{
+.career_container{
     display: grid;
-    background-color: #C6C9E6;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(10,auto);
     margin: 10px;
     column-gap: 40px;
-
 }
+
 .address{
     display: grid;
     grid-template-row: repeat(3,auto);
@@ -58,33 +21,30 @@ body{
     grid-template-row: repeat(2,auto);
 
 }
-.item{
-    border: 1px solid red;
-    height: 50px;
-    margin: 10px;
-}
-.photodetail{
+
+.title_career{
     grid-column: 1 / span 2;
     /*height: 25px;*/
-    background-color:#7C85C6;
+    background-color: deepskyblue;
     color: white;
-    padding: 10px ;
+    padding: 10px;
 }
 
-#title{
-    width: 100%;
+#first_name, #last_name {
+    width: auto;
+    padding: 5px;
 }
+
+#email, #phone {
+    width: auto;
+    padding:  5px 10px;
+}
+
 .title_text{
-    grid-column: 1 / span 2;
-    margin: 10px;
-    background-color:#C6C9E6;
-}
-.description_text{
-    grid-column: 1 / span 2;
     margin: 10px;
 }
-#description{
-    width: 100%;
+.files{
+    margin: 10px;
 }
 
 .continent{
@@ -123,59 +83,26 @@ body{
 #city_select{
     width: 100%;
 }
-.copyright{
+.copyright, .types{
     border: 1px solid grey;
     padding: 5px;
-}
-
-.types{
-    border: 1px solid grey;
-    padding: 5px;
-}
-.date_box{
-    display: grid;
-    grid-template-row: repeat(2,auto);
-    padding: 5px;
-    margin: 5px;
-}
-
-.date_take{
-    border: 1px solid grey;
-    border-bottom: 0px;
-    padding: 5px;
-}
-
-.take_time{
-    border: 1px solid grey;
-    border-top: 0px;
-    padding: 5px;
-}
-
-#date_take{
-    margin: 5px;
-}
-
-#time_take{
-    margin: 5px;
 }
 
 .accept{
     grid-column: 1 / span 2;
-    background-color:#A0A8D6;
     margin: 10px;
     padding : 5px;
 }
 
-.buttonfield{
+.button_field{
     grid-column: 1 / span 2;
-    margin: 10px;
-    background-color:#A0A8D6;
     margin: 10px;
     padding: 10px;
 }
 
-#submit_form{
-    background-color: #E91E63;
+.career_button {
+    background-color: darkblue;
+    cursor: pointer;
     color: white;
     padding: 5px;
     width: 10%;
@@ -183,11 +110,6 @@ body{
     box-shadow: 2px 2px 2px darkgreen;
 }
 
-#clear_form{
-    background-color: #E91E63;
-    color: white;
-    padding: 5px;
-    width: 10%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px darkgreen;
+.career_button:hover {
+    background-color: deepskyblue;
 }
