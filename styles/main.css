@@ -108,7 +108,7 @@ header .main-menu li a:hover {
 /* VISUAL */
 .section--visual {
     position: relative;
-    background-image: url("./../img/Image/bg_pets.png");
+    background-image: url("../img/image/bg_pets.png");
     background-repeat: no-repeat;
     background-position: 0 1px;
     background-size: cover;
