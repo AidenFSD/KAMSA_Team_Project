@@ -25,4 +25,4 @@
       toggle.classList.remove('on');
     });
   }
-})(window, document);
+})(window, document)
