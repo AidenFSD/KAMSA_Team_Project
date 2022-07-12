@@ -1,25 +1,11 @@
+@import "reset.css";
+
 .career_container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(10,auto);
-    margin: 10px;
-    column-gap: 40px;
-}
-
-.address{
-    display: grid;
-    grid-template-row: repeat(3,auto);
-    width: 70%;
-}
-.photocolor{
-    display: grid;
-    grid-template-row: repeat(2,auto);
-    width: 70%;
-}
-.copy_box{
-    display: grid;
-    grid-template-row: repeat(2,auto);
-
+    column-gap: 10px;
+    width: auto;
 }
 
 .title_career{
@@ -30,7 +16,27 @@
     padding: 10px;
 }
 
-#first_name, #last_name {
+.personal_info{
+    margin: 10px;
+}
+
+.cv_site{
+    margin-top: 10px;
+}
+
+.jobs{
+    display: grid;
+    grid-template-row: repeat(3,auto);
+    width: auto;
+}
+
+.check_box{
+    display: grid;
+    grid-template-row: repeat(2,auto);
+
+}
+
+#first_name, #middle_name, #last_name {
     width: auto;
     padding: 5px;
 }
@@ -40,58 +46,12 @@
     padding:  5px 10px;
 }
 
-.title_text{
-    margin: 10px;
-}
-.files{
+.city, .job_category, .job_type{
     margin: 10px;
 }
 
-.continent{
-    margin: 10px;
-}
-.country{
-    margin: 10px;
-}
-.city{
-    margin: 10px;
-}
-.copyright{
-    margin: 10px;
-}
-.types{
-    margin: 10px;
-}
-.color_picker{
-    margin: 10px;
-}
-
-.rate_photo{
-    margin: 10px;
-}
-
-#rate_photo_text{
-    width: 20%;
-}
-
-#continent_select{
+#city_select, #job_type_select, #job_category_select{
     width: 100%;
-}
-#country_select{
-    width: 100%;
-}
-#city_select{
-    width: 100%;
-}
-.copyright, .types{
-    border: 1px solid grey;
-    padding: 5px;
-}
-
-.accept{
-    grid-column: 1 / span 2;
-    margin: 10px;
-    padding : 5px;
 }
 
 .button_field{
