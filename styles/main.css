@@ -65,7 +65,7 @@ header .logo {
 }
 
 header .logo a {
-    background: url("../img/logo.png");
+    background: url("https://gentlelemur.speedgabia.com/petbedCA/logo.png");
     width: 30px;
     height: 30px;
     display: block;
@@ -108,7 +108,7 @@ header .main-menu li a:hover {
 /* VISUAL */
 .section--visual {
     position: relative;
-    background-image: url("../img/image/bg_pets.png");
+    background-image: url("https://gentlelemur.speedgabia.com/petbedCA/bg_pets.png");
     background-repeat: no-repeat;
     background-position: 0cm 1px;
     background-size: cover;
