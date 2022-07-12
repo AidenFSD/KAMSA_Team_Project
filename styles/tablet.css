@@ -1,7 +1,7 @@
 /* HEADER */
-/* 선택자 우선순위 */
+/* selection priority  */
 header.section .inner {
-    max-width: none; /* 초기화 */
+    max-width: none; /* reset */
     height: auto;
     padding: 0 20px;
 }
@@ -54,14 +54,14 @@ header .sub-menu {
     justify-content: center;
 }
 
-/* 토글될 요소들만 `toggle`클래스 부여 */
+/* Elements for toggle*/
 header .toggle {
     display: none;
 }
 header .toggle.on {
     display: block;
 }
-/* 토글 버튼 */
+/* toggle button */
 #toggle-btn {
     display: block;
 }
