@@ -282,6 +282,31 @@ header .main-menu li a:hover {
     color: #767676;
 }
 
+/* Company History */
+.masthead {
+    background: url('https://gentlelemur.speedgabia.com/petbedCA/ceomain.jpeg') no-repeat center;
+    height: 462px;
+    background-size: contain; /* other value: cover, auto */
+}
+.introduction h3{
+    text-align: center;
+}
+
+.introduction h5{
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.fire,.kickstarter,.review,.history {
+    margin-top:15px;
+}
+
+
+.fireimg,.kickstarterimg,.reviewingimg, .historyimg {
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+}
 
 /* FOOTER */
 footer .inner {
