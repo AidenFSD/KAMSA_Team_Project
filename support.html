@@ -31,7 +31,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="images/png" href="img/favicon.png"/>
 
-
     <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script defer src="js/main.js"></script>
@@ -43,11 +42,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div id="body__container">
-    <!--HEADER-->
-    <div include-html="htmls/header.html"></div>
+<!--HEADER-->
+<div include-html="htmls/header.html"></div>
 
-    <!-- Support Main -->
+<!-- BODY -->
+<div id="body__container">
     <form class="support_container"  action="complete.html">
             <div class="panel panel-default" style="margin: 20px">
                 <div class="panel-heading">
@@ -86,12 +85,12 @@
             </div>
 
     </form>
-
-    <!--FOOTER-->
-    <div include-html="htmls/footer.html"></div>
-    <script>
-        includeHTML();
-    </script>
 </div>
+
+<!--FOOTER-->
+<div include-html="htmls/footer.html"></div>
+<script>
+    includeHTML();
+</script>
 </body>
 </html>

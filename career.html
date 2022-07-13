@@ -8,7 +8,6 @@
     <meta name="description" content="World Best Pet Bed Product">
     <meta name="author" content="GentleLemur">
 
-
     <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport"
@@ -19,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="styles/main.css" rel="stylesheet"/>
@@ -29,10 +29,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="images/png" href="img/favicon.png"/>
-
 
     <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -40,11 +40,11 @@
     <script src="js/AddHTML.js"></script>
 </head>
 <body>
-<div id="body__container">
-    <!--HEADER-->
-    <div include-html="htmls/header.html"></div>
+<!--HEADER-->
+<div include-html="htmls/header.html"></div>
 
-    <!-- Career Main -->
+<!-- Body -->
+<div id="body__container">
     <form class="support_container" action="complete.html">
         <div class="support_board">
             <div class="panel panel-default" style="margin: 20px">
@@ -161,11 +161,12 @@
         </div>
     </form>
 
-    <!--FOOTER-->
-    <div include-html="htmls/footer.html"></div>
-    <script>
-        includeHTML();
-    </script>
 </div>
+
+<!--FOOTER-->
+<div include-html="htmls/footer.html"></div>
+<script>
+    includeHTML();
+</script>
 </body>
 </html>

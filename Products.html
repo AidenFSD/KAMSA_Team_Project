@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="styles/main.css" rel="stylesheet"/>
@@ -25,11 +26,9 @@
     <link rel="stylesheet" media="(max-width: 768px)" href="styles/mobile.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="images/png" href="img/favicon.png"/>
-
 
     <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,15 +36,18 @@
     <script src="js/AddHTML.js"></script>
 </head>
 <body>
-<div id="body__container">
-    <!--HEADER-->
-    <div include-html="htmls/header.html"></div>
+<!--HEADER-->
+<div include-html="htmls/header.html"></div>
 
-    <!--FOOTER-->
-    <div include-html="htmls/footer.html"></div>
-    <script>
-        includeHTML();
-    </script>
+<!-- BODY -->
+<div id="body__container">
+
 </div>
+
+<!--FOOTER-->
+<div include-html="htmls/footer.html"></div>
+<script>
+    includeHTML();
+</script>
 </body>
 </html>
