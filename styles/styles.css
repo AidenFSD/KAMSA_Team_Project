@@ -11317,6 +11317,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: white;
 }
 
 #mainNav .navbar-toggler {
@@ -11351,8 +11352,7 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: transparent;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    background-color: white;
   }
   #mainNav .navbar-brand {
     font-size: 1.5em;
@@ -11365,14 +11365,14 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
+    background-color: white;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 4rem;
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
