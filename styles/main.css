@@ -285,7 +285,8 @@ header .main-menu li a:hover {
 }
 
 .support_container {
-    margin: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 /* Company History */
@@ -322,6 +323,9 @@ header .main-menu li a:hover {
     grid-gap: 20px;
     place-items: center;
 }
+.form-check form-check-inline{
+    display: grid;
+}
 
 .workplace{
     display: grid;
@@ -333,6 +337,7 @@ header .main-menu li a:hover {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-gap: 20px;
+    width: 100%;
 }
 
 
