@@ -245,7 +245,7 @@ header .main-menu li a:hover {
 /*    border-right: 1px solid #e5e5e5;*/
 /*    box-sizing: border-box;*/
 /*}*/
-.section--feature .tiles h2{
+.section--feature .tiles h2 {
     text-align: center;
 }
 
@@ -284,30 +284,50 @@ header .main-menu li a:hover {
     color: #767676;
 }
 
+.support_container {
+    margin: 10px;
+}
+
 /* Company History */
 .masthead {
     background: url('https://gentlelemur.speedgabia.com/petbedCA/ceomain.jpeg') no-repeat center;
     height: 462px;
     background-size: contain; /* other value: cover, auto */
 }
-.introduction h3{
+
+.introduction h3 {
     text-align: center;
 }
 
-.introduction h5{
+.introduction h5 {
     font-weight: lighter;
     font-size: 20px;
 }
 
-.fire,.kickstarter,.review,.history {
-    margin-top:15px;
+.fire, .kickstarter, .review, .history {
+    margin-top: 15px;
 }
 
 
-.fireimg,.kickstarterimg,.reviewingimg, .historyimg {
+.fireimg, .kickstarterimg, .reviewingimg, .historyimg {
     width: 75%;
     margin: 0 auto;
     display: block;
+}
+
+.btnForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+    grid-gap: 20px;
+    place-items: center;
+}
+
+.form-inline{
+    margin: 15px;
+}
+.form-inline label{
+    width: 150px;
 }
 
 /* FOOTER */
@@ -356,9 +376,11 @@ footer .logo:hover svg {
     fill: #4078c0;
 }
 
-.scroll{
-    color:#fff;
-    margin-top:100px;
+
+/* Bootstrap for scroll TOP button */
+.scroll {
+    color: #fff;
+    margin-top: 100px;
 }
 
 #toTopBtn {
@@ -367,8 +389,7 @@ footer .logo:hover svg {
     right: 39px;
     z-index: 98;
     padding: 21px;
-    background-color: hsla(5,76%,62%,.8);
-
+    background-color: hsla(5, 76%, 62%, .8);
 }
 
 .js .cd-top--fade-out {
@@ -383,7 +404,7 @@ footer .logo:hover svg {
 .js .cd-top {
     visibility: hidden;
     opacity: 0;
-    transition: opacity .3s,visibility .3s,background-color .3s;
+    transition: opacity .3s, visibility .3s, background-color .3s;
 }
 
 .cd-top {
@@ -391,9 +412,17 @@ footer .logo:hover svg {
     bottom: 20px;
     right: 20px;
     display: inline-block;
-
-    box-shadow: 0 0 10px rgba(0,0,0,.05) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
     background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
-    background-color: hsla(5,76%,62%,.8);
+    background-color: hsla(5, 76%, 62%, .8);
 
+}
+
+.fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
 }
