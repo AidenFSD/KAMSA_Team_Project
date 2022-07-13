@@ -94,7 +94,7 @@ header .main-menu li a:hover {
     color: #4078c0;
 }
 
-#toggle-btn {
+#toggle-b-fieldtn {
     display: none;
     background: url("../img/toggle-btn.svg");
     width: 18px;
@@ -374,9 +374,8 @@ footer .site-links li a:hover {
     text-decoration: underline;
 }
 
-footer .logo {
-    width: 24px;
-    height: 24px;
+footer .logo-field {
+    display: table;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -385,10 +384,12 @@ footer .logo {
     margin: auto;
 }
 
-footer .logo:hover svg {
-    fill: #4078c0;
+footer .btn {
+    color: white;
+    background-color: black;
+    border-radius: 40%;
+    margin: 0 5px;
 }
-
 
 /* Bootstrap for scroll TOP button */
 .scroll {
