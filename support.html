@@ -60,19 +60,27 @@
 
             </div>
             <div class="panel-body">
-                <label style="width: 100%">
-                <input type="text" class="form-control" placeholder="First Name">
-                <br/>
-                <input type="text" class="form-control" placeholder="Last Name">
-                <br/>
-                <input type="text" class="form-control" placeholder="E-Mail Address">
-                <br/>
-                <input type="text" class="form-control" placeholder="Enter the Title">
-                <br/>
-                <textarea name="" id="myEditor" cols="30" rows="10 " placeholder="Adding a Description"></textarea>
-                <br/>
-                </label>
-
+                <ul>
+                    <li class="form-inline ">
+                        <label for="first_name"></label>
+                        <input type="text" class="form-control" placeholder="First Name" id="first_name">
+                    </li>
+                    <li class="form-inline">
+                        <label for="last_name"></label>
+                        <input type="text" class="form-control" placeholder="Last Name" id="last_name">
+                    </li>
+                    <li class="form-inline">
+                        <label for="email"></label>
+                        <input type="email" class="form-control" placeholder="E-Mail Address" id="email">
+                    </li>
+                    <li class="form-inline">
+                        <label for="title"></label>
+                        <input type="tel" class="form-control" placeholder="Enter the Title" id="title">
+                    </li>
+                    <li class="form-inline">
+                        <label for="myEditor"></label>
+                        <textarea name="" id="myEditor" cols="30" rows="10 " placeholder="Adding a Description"></textarea>
+                    </li>
 
                 <!-- Style -->
                 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
