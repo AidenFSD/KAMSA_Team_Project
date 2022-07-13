@@ -25,8 +25,11 @@
     <link rel="stylesheet" media="(max-width: 1024px)" href="styles/tablet.css">
     <link rel="stylesheet" media="(max-width: 768px)" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/career.css"/>
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="images/png" href="img/favicon.png"/>
@@ -35,105 +38,273 @@
     <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script defer src="js/main.js"></script>
-    <script src="js/AddHTML.js"></script>
 </head>
 
 <body>
-    <div id="body__container">
-        <div include-html="htmls/header.html"></div>
-        <div class="career_div">
-            <form class="career_container">
-                <div class="title_career">Career</div>
-                <div class="personal_info">
-                    <label for="first_name">Name</label>
-                    <label for="last_name"></label> <br>
-                    <input type="text" id="first_name" placeholder="First Name"/>
-                    <input type="text" id="last_name" placeholder="Last Name"/> <br>
-                    <label for="email">E-Mail</label> <br>
-                    <input type="email" id="email" placeholder="Enter your e-mail address"/> <br>
-                    <label for="phone">Phone Number </label> <br>
-                    <input type="tel" id="phone" placeholder="Enter your phone number"/>
-                </div>
+<div id="body__container">
+    <!--HEADER-->
+    <header class="section">
+        <div class="inner clearfix">
 
-                <div class="cv_site">
-                    <label for="cv_file">CV File</label> <br>
-                    <input type="file" id="cv_file"/> <br>
-                    <label for="personal_site">Personal Site</label>
-                    <br>
-                    <input type="url" id="personal_site" placeholder="LinkedIn, Indeed, others ..."/>
+            <div class="menu-group float--left">
+                <div class="logo">
+                    <a href="#">GentleLemur</a>
                 </div>
-                <div class="jobs">
-                    <div class="city">
-                        <label for="city_select">City</label>
-                        <br>
-                        <select id="city_select">
-                            <option value="" disabled selected>Choose City</option>
-                            <option value="Vancouver">Vancouver, BC</option>
-                            <option value="Montreal">Montreal, QC</option>
-                            <option value="Ottawa">Ottawa, ON</option>
-                            <option value="Toronto">Toronto, ON</option>
-                        </select>
-                    </div>
-                    <div class="job_category">
-                        <label for="job_category_select">Job Category</label>
-                        <br>
-                        <select id="job_category_select">
-                            <option value="" disabled selected>Choose Job Category</option>
-                            <option value="Software Development">Software Development</option>
-                            <option value="Design">Design</option>
-                            <option value="Marketing">Marketing</option>
-                            <option value="Customer Service">Customer Service</option>
-                        </select>
-                    </div>
-                    <div class="job_type">
-                        <label for="job_type_select">Job Type</label>
-                        <br>
-                        <select id="job_type_select">
-                            <option value="" disabled selected>Choose Job Type</option>
-                            <option value="Full Time">Full Time</option>
-                            <option value="Part Time">Part Time</option>
-                        </select>
-                    </div>
-                </div>
+                <ul class="main-menu toggle">
+                    <li><a href="companyHistory.html">Company History</a></li>
+                    <li><a href="MediaCenter.html">Media Center </a></li>
+                    <li><a href="Products.html">Products </a></li>
+                    <li><a href="career.html">Career </a></li>
+                    <li><a href="support.html">Support </a></li>
+                </ul>
+            </div>
 
-                <div class="check_box">
-                    <div class="workplace">
-                        <label>Workplace</label>
-                        <br>
-                        <input type="radio" name="remote" id="remote" value="remote"/>
-                        <label for="remote">Remote</label>
-                        <br/>
-                        <input type="radio" name="on-site" id="on-site" value="on_site"/>
-                        <label for="on-site">On-site</label>
-                        <br/>
-                        <input type="radio" name="hybrid" id="hybrid" value="hybrid"/>
-                        <label for="hybrid">Hybrid</label>
-                    </div>
-                    <div class="language">
-                        <label>Language</label>
-                        <br>
-                        <input type="checkbox" id="english" value="english"/>
-                        <label for="english">English</label>
-                        <br/>
-                        <input type="checkbox" id="french" value="french"/>
-                        <label for="french">Français</label>
-                        <br/>
-                        <input type="checkbox" id="others" value="others"/>
-                        <label for="others">Others</label>
-                        <br/>
-                    </div>
-                </div>
-
-                <div class="button_field">
-                    <input type="submit" class="career_button" value="Submit"/>
-                    <input type="reset" class="career_button" value="Clear Form"/>
-                </div>
-            </form>
+            <div id="toggle-btn">Header Menu Toggle Button</div>
         </div>
-        <div include-html="htmls/footer.html"></div>
-        <script>
-            includeHTML();
-        </script>
+    </header>
+
+
+    <form class="support_container" action="complete.html">
+        <div class="support_board">
+            <div class="panel panel-default" style="margin: 20px">
+                <div class="panel-heading">
+                    Career
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        <li class="form-inline">
+                            <label for="first_name">First Name :</label>
+                            <input type="text" class="form-control" placeholder="First Name">
+                        </li>
+                        <li class="form-inline">
+                            <label for="last_name">Last Name :</label>
+                            <input type="text" class="form-control" placeholder="Last Name">
+                        </li>
+                        <li class="form-inline">
+                            <label for="email">E-mail :</label>
+                            <input type="email" class="form-control" placeholder="E-Mail Address">
+                        </li>
+                        <li class="form-inline">
+                            <label for="phone">Phone Number :</label>
+                            <input type="tel" class="form-control" placeholder="Enter phone number">
+                        </li>
+                        <li class="form-inline">
+                            <label for="city_select">CITY : </label>
+                            <select ng-model='discussionsSelect' class='form-control'>
+                                <option value="" disabled selected>Choose City</option>
+                                <option value="Vancouver">Vancouver, BC</option>
+                                <option value="Montreal">Montreal, QC</option>
+                                <option value="Ottawa">Ottawa, ON</option>
+                                <option value="Toronto">Toronto, ON</option>
+                            </select>
+                        </li>
+
+                        <li class="form-inline">
+                            <label for="city_select">Job Category : </label>
+                            <select ng-model='discussionsSelect' class='form-control'>
+                                <option value="" disabled selected>Choose Job Category</option>
+                                <option value="Software Development">Software Development</option>
+                                <option value="Design">Design</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Customer Service">Customer Service</option>
+                            </select>
+                        </li>
+
+                        <li class="form-inline">
+                            <label for="job_type_select">Job Type</label>
+                            <select ng-model='discussionsSelect' class='form-control'>
+                                <option value="" disabled selected>Choose Job Type</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
+                            </select>
+                            </select>
+                        </li>
+                        <li class="form-inline">
+                            <label for="formFile" class="form-label">CV File</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </li>
+
+                        <li class="form-inline">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">3</label>
+                            </div>                        </li>
+
+                    </ul>
+
+                    <textarea name="" id="myEditor" cols="30" rows="10 " placeholder="Adding a Description"></textarea>
+
+
+                    <!-- Style -->
+                    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
+                    <!-- JavaScript -->
+                    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script>
+
+
+                    <script>
+                        $(document).ready(function () {
+
+                            $('#myEditor').summernote({
+                                lang: 'ko-KR',
+                                height: 300,
+                            });
+                        });
+                    </script>
+                    <div class="btnForm">
+                        <div>
+                            <button class="btn btn-lg btn-success btn-block">SUBMIT</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-lg btn-success btn-block">CLEAR</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="career_div">
+        <form class="career_container">
+            <div class="title_career">Career</div>
+            <div class="personal_info">
+                <label for="first_name">Name</label>
+                <label for="last_name"></label> <br>
+                <input type="text" id="first_name" placeholder="First Name"/>
+                <input type="text" id="last_name" placeholder="Last Name"/> <br>
+                <label for="email">E-Mail</label> <br>
+                <input type="email" id="email" placeholder="Enter your e-mail address"/> <br>
+                <label for="phone">Phone Number </label> <br>
+                <input type="tel" id="phone" placeholder="Enter your phone number"/>
+            </div>
+
+            <div class="cv_site">
+                <label for="cv_file">CV File</label> <br>
+                <input type="file" id="cv_file"/> <br>
+                <label for="personal_site">Personal Site</label>
+                <br>
+                <input type="url" id="personal_site" placeholder="LinkedIn, Indeed, others ..."/>
+            </div>
+            <div class="jobs">
+                <div class="city">
+                    <label for="city_select">City</label>
+                    <br>
+                    <select id="city_select">
+                        <option value="" disabled selected>Choose City</option>
+                        <option value="Vancouver">Vancouver, BC</option>
+                        <option value="Montreal">Montreal, QC</option>
+                        <option value="Ottawa">Ottawa, ON</option>
+                        <option value="Toronto">Toronto, ON</option>
+                    </select>
+                </div>
+                <div class="job_category">
+                    <label for="job_category_select">Job Category</label>
+                    <br>
+                    <select id="job_category_select">
+                        <option value="" disabled selected>Choose Job Category</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Design">Design</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Customer Service">Customer Service</option>
+                    </select>
+                </div>
+                <div class="job_type">
+                    <label for="job_type_select">Job Type</label>
+                    <br>
+                    <select id="job_type_select">
+                        <option value="" disabled selected>Choose Job Type</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="check_box">
+                <div class="workplace">
+                    <label>Workplace</label>
+                    <br>
+                    <input type="radio" name="remote" id="remote" value="remote"/>
+                    <label for="remote">Remote</label>
+                    <br/>
+                    <input type="radio" name="on-site" id="on-site" value="on_site"/>
+                    <label for="on-site">On-site</label>
+                    <br/>
+                    <input type="radio" name="hybrid" id="hybrid" value="hybrid"/>
+                    <label for="hybrid">Hybrid</label>
+                </div>
+                <div class="language">
+                    <label>Language</label>
+                    <br>
+                    <input type="checkbox" id="english" value="english"/>
+                    <label for="english">English</label>
+                    <br/>
+                    <input type="checkbox" id="french" value="french"/>
+                    <label for="french">Français</label>
+                    <br/>
+                    <input type="checkbox" id="others" value="others"/>
+                    <label for="others">Others</label>
+                    <br/>
+                </div>
+            </div>
+
+            <div class="button_field">
+                <input type="submit" class="career_button" value="Submit"/>
+                <input type="reset" class="career_button" value="Clear Form"/>
+            </div>
+        </form>
     </div>
+
+    <footer class="section">
+        <div class="inner clearfix">
+
+            <ul class="site-links float--right">
+                <li><a href="#">Contact&nbsp;GentleLemur</a></li>
+                <li><a href="companyHistory.html">Company History</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">SNS</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+
+            <ul class="site-links float--left">
+                <li>© 2022 GentleLemur, Inc.</li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+
+            <a class="logo" href="indexEn.html">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="24px" height="24" viewBox="0 0 495.398 495.398"
+                     style="enable-background:new 0 0 495.398 495.398;"
+                     xml:space="preserve">
+    			    <path fill-rule="evenodd"
+                          d="M487.083,225.514l-75.08-75.08V63.704c0-15.682-12.708-28.391-28.413-28.391c-15.669,0-28.377,12.709-28.377,28.391
+    				v29.941L299.31,37.74c-27.639-27.624-75.694-27.575-103.27,0.05L8.312,225.514c-11.082,11.104-11.082,29.071,0,40.158
+    				c11.087,11.101,29.089,11.101,40.172,0l187.71-187.729c6.115-6.083,16.893-6.083,22.976-0.018l187.742,187.747
+    				c5.567,5.551,12.825,8.312,20.081,8.312c7.271,0,14.541-2.764,20.091-8.312C498.17,254.586,498.17,236.619,487.083,225.514z"/>
+                    <path fill-rule="evenodd"
+                          d="M257.561,131.836c-5.454-5.451-14.285-5.451-19.723,0L72.712,296.913c-2.607,2.606-4.085,6.164-4.085,9.877v120.401
+    				c0,28.253,22.908,51.16,51.16,51.16h81.754v-126.61h92.299v126.61h81.755c28.251,0,51.159-22.907,51.159-51.159V306.79
+    				c0-3.713-1.465-7.271-4.085-9.877L257.561,131.836z"/>
+                   </svg>
+            </a>
+            <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+               data-abc="true"></a>
+        </div>
+    </footer>
+</div>
 </body>
 </html>

@@ -1,12 +1,12 @@
 @import "reset.css";
 
-.support_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(10,auto);
-    column-gap: 10px;
-    width: auto;
-}
+/*.support_container{*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    grid-template-rows: repeat(10,auto);*/
+/*    column-gap: 10px;*/
+/*    width: auto;*/
+/*}*/
 
 .input-field, .button_field {
     grid-column: 1 / span 2;
