@@ -339,17 +339,13 @@ footer .btn {
 }
 
 /*career*/
-.panel-body{
-    margin: 20px;
-    padding: 20px;
-
-
+.panel-body ul{
+    padding-left: 0;
 }
 
 .support_container {
-    margin-left: 150px;
-    margin-right: 150px;
-    width :75%;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .support_button{
