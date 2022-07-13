@@ -284,30 +284,6 @@ header .main-menu li a:hover {
     color: #767676;
 }
 
-.support_container {
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
-.btnForm {
-    display: grid;
-    margin: auto;
-    width: 300px;
-
-
-}
-.btnForm button{
-    width: 300px;
-    margin : auto;
-}
-
-
-.form-inline{
-    margin: 15px;
-}
-.form-inline label{
-    width: 150px;
-}
 
 /* FOOTER */
 footer .inner {
@@ -356,6 +332,51 @@ footer .btn {
     border-radius: 40%;
     margin: 0 5px;
 }
+
+/*career*/
+.panel-body{
+    margin: 20px;
+    padding: 20px;
+
+
+}
+
+.support_container {
+    margin-left: 150px;
+    margin-right: 150px;
+    width :75%;
+}
+
+.support_button{
+    display: grid;
+    margin: auto;
+    width: 300px;
+
+}
+
+.btnForm {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+    width: 300px;
+
+
+}
+.btnForm button{
+    display: inline-block;
+    width: 150px;
+    margin : auto;
+}
+
+
+.form-inline{
+    margin: 15px;
+}
+.form-inline label{
+    width: 150px;
+}
+
 
 /* Bootstrap for scroll TOP button */
 .scroll {
