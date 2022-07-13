@@ -325,19 +325,15 @@ header .main-menu li a:hover {
 
 .workplace{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
 }
 
 .languagebox{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-gap : 10px;
+    grid-gap: 20px;
 }
-
-/*#otherlanguages{*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(2,1fr);*/
-/*}*/
 
 
 .form-inline{
