@@ -11435,6 +11435,11 @@ header.masthead .masthead-heading {
   height: 60vh;
 }
 
+#applying .text-muted {
+  display: inline-block;
+  background: linear-gradient(to top, lightyellow 30%, transparent 70%);
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
