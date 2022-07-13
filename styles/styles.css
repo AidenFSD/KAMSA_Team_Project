@@ -11426,6 +11426,15 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+#applying {
+  background-image: url("../img/image/003_8.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60vh;
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
