@@ -75,23 +75,24 @@
                     <ul>
                         <li class="form-inline">
                             <label for="first_name">First Name :</label>
-                            <input type="text" class="form-control" placeholder="First Name">
+                            <input type="text" class="form-control" placeholder="First Name" id = "first_name">
                         </li>
                         <li class="form-inline">
                             <label for="last_name">Last Name :</label>
-                            <input type="text" class="form-control" placeholder="Last Name">
+                            <input type="text" class="form-control" placeholder="Last Name" id = "last_name">
                         </li>
                         <li class="form-inline">
                             <label for="email">E-mail :</label>
-                            <input type="email" class="form-control" placeholder="E-Mail Address">
+                            <input type="email" class="form-control" placeholder="E-Mail Address" id ="email">
+
                         </li>
                         <li class="form-inline">
                             <label for="phone">Phone Number :</label>
-                            <input type="tel" class="form-control" placeholder="Enter phone number">
+                            <input type="tel" class="form-control" placeholder="Enter phone number" id ="phone">
                         </li>
                         <li class="form-inline">
                             <label for="city_select">CITY : </label>
-                            <select ng-model='discussionsSelect' class='form-control'>
+                            <select ng-model='discussionsSelect' class='form-control' id = "city_select">
                                 <option value="" disabled selected>Choose City</option>
                                 <option value="Vancouver">Vancouver, BC</option>
                                 <option value="Montreal">Montreal, QC</option>
@@ -113,7 +114,7 @@
 
                         <li class="form-inline">
                             <label for="job_type_select">Job Type</label>
-                            <select ng-model='discussionsSelect' class='form-control'>
+                            <select ng-model='discussionsSelect' class='form-control' id = "job_type_select">
                                 <option value="" disabled selected>Choose Job Type</option>
                                 <option value="Full Time">Full Time</option>
                                 <option value="Part Time">Part Time</option>
@@ -126,40 +127,46 @@
                         </li>
 
                         <li class="form-inline">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                            <div class="workplace">
+                                <label>Workplace</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="worktyperemote" value="remote">
+                                    <label class="form-check-label" for="worktyperemote">Remote</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="worktypeonsite" value="onsite">
+                                    <label class="form-check-label" for="worktyperemote">On-Site</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="worktypehybrid" value="hybrid">
+                                    <label class="form-check-label" for="worktypehybrid">Hybrid</label>
+                                </div>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                <label class="form-check-label" for="inlineCheckbox2">2</label>
+                        </li>
+
+                        <li class="form-inline">
+                            <div class="languagebox">
+                                <label>Language</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="languageen" value="English">
+                                    <label class="form-check-label" for="languageen">English</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="languageenfn" value="onsite">
+                                    <label class="form-check-label" for="languageenfn">French</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="languageont" value="hybrid">
+                                    <label class="form-check-label" for="languageont">Others</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="text" id="languageonttext" placeholder="Enter your language">
+                                </div>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                                <label class="form-check-label" for="inlineCheckbox3">3</label>
-                            </div>                        </li>
+                        </li>
 
                     </ul>
-
-                    <textarea name="" id="myEditor" cols="30" rows="10 " placeholder="Adding a Description"></textarea>
-
-
-                    <!-- Style -->
-                    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
-                    <!-- JavaScript -->
-                    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script>
-
-
-                    <script>
-                        $(document).ready(function () {
-
-                            $('#myEditor').summernote({
-                                lang: 'ko-KR',
-                                height: 300,
-                            });
-                        });
-                    </script>
-                    <div class="btnForm">
+                  <div class="btnForm">
                         <div>
                             <button class="btn btn-lg btn-success btn-block">SUBMIT</button>
                         </div>
@@ -173,95 +180,6 @@
         </div>
     </form>
 
-    <div class="career_div">
-        <form class="career_container">
-            <div class="title_career">Career</div>
-            <div class="personal_info">
-                <label for="first_name">Name</label>
-                <label for="last_name"></label> <br>
-                <input type="text" id="first_name" placeholder="First Name"/>
-                <input type="text" id="last_name" placeholder="Last Name"/> <br>
-                <label for="email">E-Mail</label> <br>
-                <input type="email" id="email" placeholder="Enter your e-mail address"/> <br>
-                <label for="phone">Phone Number </label> <br>
-                <input type="tel" id="phone" placeholder="Enter your phone number"/>
-            </div>
-
-            <div class="cv_site">
-                <label for="cv_file">CV File</label> <br>
-                <input type="file" id="cv_file"/> <br>
-                <label for="personal_site">Personal Site</label>
-                <br>
-                <input type="url" id="personal_site" placeholder="LinkedIn, Indeed, others ..."/>
-            </div>
-            <div class="jobs">
-                <div class="city">
-                    <label for="city_select">City</label>
-                    <br>
-                    <select id="city_select">
-                        <option value="" disabled selected>Choose City</option>
-                        <option value="Vancouver">Vancouver, BC</option>
-                        <option value="Montreal">Montreal, QC</option>
-                        <option value="Ottawa">Ottawa, ON</option>
-                        <option value="Toronto">Toronto, ON</option>
-                    </select>
-                </div>
-                <div class="job_category">
-                    <label for="job_category_select">Job Category</label>
-                    <br>
-                    <select id="job_category_select">
-                        <option value="" disabled selected>Choose Job Category</option>
-                        <option value="Software Development">Software Development</option>
-                        <option value="Design">Design</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Customer Service">Customer Service</option>
-                    </select>
-                </div>
-                <div class="job_type">
-                    <label for="job_type_select">Job Type</label>
-                    <br>
-                    <select id="job_type_select">
-                        <option value="" disabled selected>Choose Job Type</option>
-                        <option value="Full Time">Full Time</option>
-                        <option value="Part Time">Part Time</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="check_box">
-                <div class="workplace">
-                    <label>Workplace</label>
-                    <br>
-                    <input type="radio" name="remote" id="remote" value="remote"/>
-                    <label for="remote">Remote</label>
-                    <br/>
-                    <input type="radio" name="on-site" id="on-site" value="on_site"/>
-                    <label for="on-site">On-site</label>
-                    <br/>
-                    <input type="radio" name="hybrid" id="hybrid" value="hybrid"/>
-                    <label for="hybrid">Hybrid</label>
-                </div>
-                <div class="language">
-                    <label>Language</label>
-                    <br>
-                    <input type="checkbox" id="english" value="english"/>
-                    <label for="english">English</label>
-                    <br/>
-                    <input type="checkbox" id="french" value="french"/>
-                    <label for="french">Français</label>
-                    <br/>
-                    <input type="checkbox" id="others" value="others"/>
-                    <label for="others">Others</label>
-                    <br/>
-                </div>
-            </div>
-
-            <div class="button_field">
-                <input type="submit" class="career_button" value="Submit"/>
-                <input type="reset" class="career_button" value="Clear Form"/>
-            </div>
-        </form>
-    </div>
 
     <footer class="section">
         <div class="inner clearfix">
