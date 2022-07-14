@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8">
+    <title>Support | GentleLemur</title>
+    <meta name="description" content="World Best Pet Bed Product">
+    <meta name="author" content="GentleLemur">
+
+    <!-- Mobile Specific Metas
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="styles/main.css" rel="stylesheet"/>
+    <link rel="stylesheet" media="(max-width: 1024px)" href="styles/tablet.css">
+    <link rel="stylesheet" media="(max-width: 768px)" href="styles/mobile.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="styles/styles.css" rel="stylesheet"/>
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="images/png" href="img/favicon.png"/>
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script defer src="js/main.js"></script>
+    <script src="js/AddHTML.js"></script>
+    <script src="js/scripts.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Style -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script>
+
+
+
+</head>
+<body>
+<!--HEADER-->
+<div include-html="htmls/headerFr.html"></div>
+<!-- Body -->
+<div id="body__container">
+    <form class="support_container" action="complete.html">
+        <div class="panel panel-default" style="margin: 20px">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase"> Nous contacter</h2>
+
+            </div>
+            <div class="panel-body">
+
+                <ul>
+                    <li class="form-inline ">
+                        <input type="text" class="form-control" placeholder="Nom" id="name">
+                    </li>
+                    <li class="form-inline">
+                        <input type="email" class="form-control" placeholder="Courriel Address" id="email">
+
+                    </li>
+                    <li class="form-inline">
+                        <input type="tel" class="form-control" placeholder="Entrez le numéro de téléphone" id="phone">
+                    </li>
+
+                    <li class="form-inline">
+                        <input type="text" class="form-control" placeholder="Entrez le titre" id="title">
+                    </li>
+                    <li class="form-inline">
+                        <textarea name="" id="myEditor" class="form-control" cols="30" rows="10" placeholder="Description"></textarea>
+                    </li>
+                </ul>
+
+
+                <div class="btnForm">
+                    <button class="btn btn-lg btn-success btn-block">SOUMETTRE</button>
+                    <button class="btn btn-lg btn-success btn-block">SUPPRIME</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<!--FOOTER-->
+<div include-html="htmls/footerFr.html"></div>
+<script>
+    includeHTML();
+</script>
+                <script>
+                    $(document).ready(function () {
+
+                        $('#myEditor').summernote({
+                            lang: 'us',
+                            height: 300,
+                        });
+                    });
+                </script>
+</body>
+</html>
