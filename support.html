@@ -54,39 +54,22 @@
 <div include-html="htmls/header.html"></div>
 <!-- Body -->
 <div id="body__container">
-    <form class="support_container" action="complete.html">
-        <div class="panel panel-default" style="margin: 20px">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase"> Contact Us</h2>
-
+    <form class="support_container" action="complete.html" style = "margin-top: 40px">
+        <div class="card" style="width: 100%; margin-top: 20px;" >
+            <div class="card-header">
+                Contact Us
             </div>
-            <div class="panel-body">
-
-                <ul>
-                    <li class="form-inline ">
-                        <input type="text" class="form-control" placeholder="Name" id="name">
-                    </li>
-                    <li class="form-inline">
-                        <input type="email" class="form-control" placeholder="E-Mail Address" id="email">
-
-                    </li>
-                    <li class="form-inline">
-                        <input type="tel" class="form-control" placeholder="Enter phone number" id="phone">
-                    </li>
-
-                    <li class="form-inline">
-                        <input type="text" class="form-control" placeholder="Enter the Title" id="title">
-                    </li>
-                    <li class="form-inline">
-                        <textarea name="" id="myEditor" class="form-control" ></textarea>
-                    </li>
-                </ul>
-
-
-                <div class="btnForm">
-                    <button class="btn btn-lg btn-success btn-block">SUBMIT</button>
-                    <button class="btn btn-lg btn-success btn-block" formaction="support.html">CANCEL</button>
-                </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> <input type="text" class="form-control" placeholder="Name" id="name"></li>
+                <li class="list-group-item"><input type="email" class="form-control" placeholder="E-Mail Address" id="email">
+                </li>
+                <li class="list-group-item"> <input type="tel" class="form-control" placeholder="Enter phone number" id="phone"></li>
+                <li class="list-group-item"> <input type="text" class="form-control" placeholder="Enter the Title" id="title"></li>
+                <li class="list-group-item">  <textarea name="" id="myEditor" class="form-control" ></textarea></li>
+            </ul>
+            <div class="btnForm">
+                <button class="btn btn-lg btn-success btn-block">SUBMIT</button>
+                <button class="btn btn-lg btn-success btn-block" formaction="support.html">CANCEL</button>
             </div>
         </div>
     </form>
