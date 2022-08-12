@@ -31,7 +31,6 @@
     <script src="../../scripts/main.js" defer></script>
     <script src="../../scripts/includeHTMLs.js"></script>
     <script src="../../scripts/scripts.js" defer></script>
-    <script src="../../scripts/mouseEvent.js" defer></script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -40,79 +39,8 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <script>
-        'use strict';
-
-        function worldClock() {
-            let placeUSA = document.getElementById('place1');
-            placeUSA.value = 'USA';
-
-            let placeChina = document.getElementById('place2');
-            placeChina.value = 'CHINA';
-
-            let placeKorea = document.getElementById('place3');
-            placeKorea.value = 'KOREA';
-
-            let placeJapan = document.getElementById('place4');
-            placeJapan.value = 'JAPAN';
-
-            let nameHouston = document.getElementById('name1');
-            let officeHouston = document.getElementById('Kickstarter');
-            placeUSA.onmouseover = nameHouston.onmouseover = officeHouston.onmouseover = function () {
-                mouseOverEvent('.usa');
-            }
-            placeUSA.onmouseout = nameHouston.onmouseout = officeHouston.onmouseout = function () {
-                mouseOutEvent('.usa');
-            }
-
-            let nameLondon = document.getElementById('name2');
-            let officeLondon = document.getElementById('Indiegogo');
-            placeUSA.onmouseover = nameLondon.onmouseover = officeLondon.onmouseover = function () {
-                mouseOverEvent('.usa');
-            }
-            placeUSA.onmouseout = nameLondon.onmouseout = officeLondon.onmouseout = function () {
-                mouseOutEvent('.usa');
-            }
-
-            let nameNewYork = document.getElementById('name3');
-            let officeNewYork = document.getElementById('Taobao');
-            placeChina.onmouseover = nameNewYork.onmouseover = officeNewYork.onmouseover = function () {
-                mouseOverEvent('.china');
-            }
-            placeChina.onmouseout = nameNewYork.onmouseout = officeNewYork.onmouseout = function () {
-                mouseOutEvent('.china');
-            }
-
-            let nameSeattle = document.getElementById('name4');
-            let officeSeattle = document.getElementById('Wadiz');
-            placeKorea.onmouseover = nameSeattle.onmouseover = officeSeattle.onmouseover = function () {
-                mouseOverEvent('.korea');
-            }
-            placeKorea.onmouseout = nameSeattle.onmouseout = officeSeattle.onmouseout = function () {
-                mouseOutEvent('.korea');
-            }
-
-            let nameSydney = document.getElementById('name5');
-            let officeSydney = document.getElementById('Sydney_Office');
-            placeJapan.onmouseover = nameSydney.onmouseover = officeSydney.onmouseover = function () {
-                mouseOverEvent('.japan');
-            }
-            placeJapan.onmouseout = nameSydney.onmouseout = officeSydney.onmouseout = function () {
-                mouseOutEvent('.japan');
-            }
-
-            let nameTokyo = document.getElementById('name6');
-            let officeTokyo = document.getElementById('Tokyo_Office');
-            placeJapan.onmouseover = nameTokyo.onmouseover = officeTokyo.onmouseover = function () {
-                mouseOverEvent('.japan');
-            }
-            placeJapan.onmouseout = nameTokyo.onmouseout = officeTokyo.onmouseout = function () {
-                mouseOutEvent('.japan');
-            }
-        }
-    </script>
 </head>
-<body onload="worldClock();">
+<body>
     <!--HEADER-->
     <div include-html="header.html"></div>
 
@@ -148,81 +76,6 @@
                     </ul>
                 </form>
 
-            </div>
-        </section>
-
-        <section class="section section--feature">
-            <div id="world">
-                <div id="worldMap">
-                    <input id="place1" class="usa" name="place1" size="7" readonly/>
-                    <input id="place2" class="china" name="place2" size="7" readonly/>
-                    <input id="place3" class="korea" name="place3" size="7" readonly/>
-                    <input id="place4" class="japan" name="place4" size="7" readonly/>
-                    <img src="../../images/map.jpg" alt="World Map" id="map" width="655" height="371"/>
-                </div>
-                <table>
-                    <tr>
-                        <th id="name1" class="usa">Kickstarter</th>
-                        <th id="name2" class="usa">Indiegogo</th>
-                        <th id="name3" class="china">Taobao</th>
-                        <th id="name4" class="korea">Wadiz</th>
-                        <th id="name5" class="japan">Sydney</th>
-                        <th id="name6" class="japan">Tokyo</th>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td id="Kickstarter" class="usa">
-                            <p>
-                                <b>Jackson Electronics USA</b>
-                                <br/>10010 Park Street
-                                <br/>New York NY 10001
-                            </p>
-                        </td>
-
-                        <td id="Indiegogo" class="usa">
-                            <p>
-                                <b>Jackson Electronics Ltd.</b>
-                                <br/>2349 Mitchell Street
-                                <br/>Seattle, WA 65091
-                            </p>
-                        </td>
-
-                        <td id="Taobao" class="china">
-                            <p>
-                                <b>Jackson Electronics</b>
-                                <br/>5150 Shasta Lane
-                                <br/>Houston, TX 32821
-                            </p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td id="Wadiz" class="korea">
-                            <p>
-                                <b>Jackson Electronics</b>
-                                <br/>18 Northland Avenue
-                                <br/>London, England WC2N 5EA
-                            </p>
-                        </td>
-
-                        <td id="Sydney_Office" class="japan">
-                            <p>
-                                <b>Jackson Electronics</b>
-                                <br/>171-105 Thomas Street
-                                <br/>Sydney NSW 2000, Australia
-                            </p>
-                        </td>
-
-                        <td id="Tokyo_Office" class="japan">
-                            <p>
-                                <b>Jackson Electronics</b>
-                                <br/>1-2-99 Sumiyoshi
-                                <br/>Tokyo 140-8781 Japan
-                            </p>
-                        </td>
-                    </tr>
-                </table>
             </div>
         </section>
 
