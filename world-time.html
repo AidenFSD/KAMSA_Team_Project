@@ -2,25 +2,54 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Jackson Electronics World Clock</title>
-    <!--Link to the external CSS named time-zones.css document -->
-    <!--Link to the external js named time_zones.js document -->
-    
-    <!--
-        Web Development with JavaScript
-        Case Problem 2
-        Assignment 01
-        
-        Jackson Electronics World Clock
-        Developed By:       Jingyu An
-        Developed Date:     08-06-2022
-        Filename:           world-time.html
-        Supporting files: time-zones.css, logo.mpg, map.jpg, time_zones.js
-    -->
+    <!-- Basic Page Needs
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8">
+    <title>Submit | GentleLemur</title>
+    <meta name="description" content="World Best Pet Bed Product">
+    <meta name="author" content="GentleLemur">
+
+    <!-- Mobile Specific Metas
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="styles/main.css" rel="stylesheet"/>
+    <link rel="stylesheet" media="(max-width: 1024px)" href="styles/tablet.css">
+    <link rel="stylesheet" media="(max-width: 768px)" href="styles/mobile.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="styles/styles.css" rel="stylesheet" />
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="images/png" href="images/favicon.png"/>
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script defer src="scripts/main.js"></script>
+    <script src="scripts/includeHTMLs.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="scripts/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <link type="text/css" rel="stylesheet" href="styles/time-zones.css">
     <script src="scripts/time_zones.js" defer></script>
+    <script src="scripts/includeHTMLs.js"></script>
     <script>
         'use strict';
 
@@ -130,9 +159,11 @@
 </head>
 
 <body onload="worldClock();">
+    <!--HEADER-->
+    <div include-html="htmls/header.html"></div>
+
     <form id="zonesForm" name="zonesForm" action="#">
         <div id="headbar">
-            <img src="images/logo.jpg" alt="Jackson Electronics" />
             <h2>Corporate Headquarters World Clock</h2>
         </div>
 
@@ -223,5 +254,11 @@
             </table>
         </div>
     </form>
+
+    <!--FOOTER-->
+    <div include-html="htmls/footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
 </body>
 </html>

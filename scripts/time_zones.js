@@ -15,12 +15,12 @@
    3) ...
 */
 
-function addTime(oldtime, milliseconds) {
+function addTime(oldTime, milliseconds) {
     let newTime;
     newTime = new Date();
 
     let newValue;
-    newValue = oldtime.getTime() + milliseconds;
+    newValue = oldTime.getTime() + milliseconds;
 
     newTime.setTime(newValue);
 
@@ -45,7 +45,7 @@ function showTime(time) {
 
     thisHour = (thisHour > 12) ? (thisHour - 12) : thisHour;
 
-    thisHour = (thisHour == 0) ? 12 : thisHour;
+    thisHour = (thisHour === 0) ? 12 : thisHour;
 
     thisMinute = (thisMinute < 10) ? ('0' + thisMinute) : thisMinute;
 

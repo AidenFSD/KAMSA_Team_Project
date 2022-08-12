@@ -1,5 +1,4 @@
-@import "reset.css";
-
+@charset "utf-8";
 /* COMMON */
 .summary__title {
     font-size: 34px !important; /* For .section--visual .summary__title */

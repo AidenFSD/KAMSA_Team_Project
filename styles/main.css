@@ -1,8 +1,4 @@
-@charset "UTF-8";
-@import "reset.css";
-
-/* COMMON */
-
+@charset "utf-8";
 .body__container {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -96,7 +92,7 @@ header .main-menu li a:hover {
 
 #toggle-b-fieldtn {
     display: none;
-    background: url("../img/toggle-btn.svg");
+    background: url("../images/toggle-btn.svg");
     width: 18px;
     height: 24px;
     position: absolute;
