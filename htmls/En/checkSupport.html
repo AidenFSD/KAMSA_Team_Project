@@ -39,25 +39,68 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script>
+        const getLocalStorage = () => {
+            if (typeof(Storage) !== "undefined") {
+                let name = document.getElementById("supportName");
+                let email = document.getElementById("supportEmail");
+                let phone = document.getElementById("supportPhone");
+                let title = document.getElementById("supportTitle");
+                let description = document.getElementById("supportDescription");
+
+                name.innerHTML = localStorage.getItem("name");
+                email.innerHTML = localStorage.getItem("email");
+                phone.innerHTML = localStorage.getItem("phone");
+                title.innerHTML = localStorage.getItem("title");
+                description.innerHTML = localStorage.getItem("description");
+
+            } else {
+                console.log("Storage is not working");
+            }
+        }
+    </script>
 </head>
-<body>
-<!--HEADER-->
-<div include-html="header.html"></div>
-<div id="body__container">
-    <section class="page-section" id="complete">
-        <div class="container" id="applying">
-            <div class="text-center">
-                <h1 class="section-heading text-uppercase">Thank you</h1>
-                <h4 class="text-muted">The form was submitted successfully.</h4> <br>
-                <h4 class="text-muted">We will contact you soon.</h4>
+<body onload="getLocalStorage();">
+    <!--HEADER-->
+    <div include-html="header.html"></div>
+    <div id="body__container">
+        <section class="page-section" id="services">
+            <ul>
+                <li>
+                    <h5>First Name</h5>
+                    <div id="supportName"></div>
+                </li>
+
+                <li>
+                    <h5>E-mail</h5>
+                    <div id="supportEmail"></div>
+                </li>
+
+                <li>
+                    <h5>Phone Number</h5>
+                    <div id="supportPhone"></div>
+                </li>
+
+                <li>
+                    <h5>Title</h5>
+                    <div id="supportTitle"></div>
+                </li>
+
+                <li>
+                    <h5>Description</h5>
+                    <div id="supportDescription"></div>
+                </li>
+            </ul>
+            <div class="btnForm">
+                <button class="btn btn-lg btn-success btn-block" onclick="location.href='complete.html'">SUBMIT</button>
+                <button class="btn btn-lg btn-success btn-block" onclick="location.href='support.html'">CANCEL</button>
             </div>
-        </div>
-    </section>
-</div>
-<!--FOOTER-->
-<div include-html="footer.html"></div>
-<script>
-    includeHTML();
-</script>
+        </section>
+    </div>
+    <!--FOOTER-->
+    <div include-html="footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
 </body>
 </html>
