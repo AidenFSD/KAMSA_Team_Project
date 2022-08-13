@@ -53,6 +53,16 @@
                 let languageEn = document.getElementById("languageEn").checked;
                 let languageFr = document.getElementById("languageFn").checked;
 
+                let cvFile = document.getElementById("formFile");
+                let fileName;
+                {
+                    let filePath = cvFile.value;
+                    let filePathSplit = filePath.split("\\");
+                    let filePathLength = filePathSplit.length;
+                    let fileNameSplit = filePathSplit[filePathLength-1].split('.');
+                    fileName = fileNameSplit[0] + '.' + fileNameSplit[1];
+                }
+
                 localStorage.setItem("first_name", firstName);
                 localStorage.setItem("last_name", lastName);
                 localStorage.setItem("email", email);
@@ -60,6 +70,7 @@
                 localStorage.setItem("city", city);
                 localStorage.setItem("jobCategory", jobCategory);
                 localStorage.setItem("jobType", jobType);
+                localStorage.setItem("cvFile", fileName);
                 localStorage.setItem("workTypeRemote", workspaceRemote);
                 localStorage.setItem("workTypeOnsite", workspaceOnsite);
                 localStorage.setItem("languageEn", languageEn);

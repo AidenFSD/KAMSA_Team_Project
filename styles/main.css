@@ -507,7 +507,7 @@ footer .btn {
 }
 
 #services li div {
-    border: dashed 2px black;
+    background: linear-gradient(90deg, whitesmoke, darkgray);
     padding: 5px;
     margin: 10px auto;
     min-height: 40px;

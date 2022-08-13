@@ -49,6 +49,7 @@
                 let city = document.getElementById("completeCity");
                 let jobCategory = document.getElementById("completeJobCategory");
                 let jobType = document.getElementById("completeJobType");
+                let cvFile = document.getElementById("completeCV");
                 let workPlace = document.getElementById("completeWorkplace");
                 let language = document.getElementById("completeLanguage");
 
@@ -79,6 +80,11 @@
                 } else {
                     language.innerHTML = "Need Check"
                 }
+
+                if (localStorage.getItem("cvFile") !== '.undefined')
+                    cvFile.innerHTML = localStorage.getItem("cvFile");
+                else
+                    cvFile.innerHTML = 'N/A'
 
             } else {
                 console.log("Storage is not working");
@@ -135,6 +141,11 @@
                 <li>
                     <h5>Language</h5>
                     <div id="completeLanguage"></div>
+                </li>
+
+                <li>
+                    <h5>CV File</h5>
+                    <div id="completeCV"></div>
                 </li>
             </ul>
             <div class="btnForm">
