@@ -31,6 +31,7 @@
     <script src="../../scripts/main.js" defer></script>
     <script src="../../scripts/includeHTMLs.js"></script>
     <script src="../../scripts/scripts.js" defer></script>
+    <script src="../../scripts/validation.js" defer></script>
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -40,6 +41,7 @@
 
     <script>
         const setLocalStorage = () => {
+            careerValidation();
             if (typeof(Storage) !== "undefined") {
                 let firstName = document.getElementById("first_name").value;
                 let lastName = document.getElementById("last_name").value;
@@ -151,26 +153,28 @@
                     </li>
                     <li class="form-inline">
                         <label for="formFile" class="form-label">CV File</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile" onchange="return checkForFileValidation()">
                     </li>
-
                     <li class="form-inline">
                         <label>Workplace</label>
-
-                        <input class="form-check-input" type="checkbox" id="workTypeRemote">
-                        <label class="form-check-label" for="workTypeRemote">Remote</label>
-                        <input class="form-check-input" type="checkbox" id="workTypeOnsite" value="onsite">
-                        <label class="form-check-label" for="workTypeOnsite">On-Site</label>
-
+                        <form name="workPlace" onfocusout="checkForWorkPlace();">
+                            <div id="msgWorkPlace"> </div>
+                            <div>
+                                <input type="checkbox" name="workPlace[]" value="Remote" id="workTypeRemote"> Remote
+                                <input type="checkbox" name="workPlace[]" value="onsite" id="workTypeOnsite"> On-Site
+                            </div>
+                        </form>
                     </li>
 
                     <li class="form-inline">
                         <label>Language</label>
-                        <input class="form-check-input" type="checkbox" id="languageEn" value="English">
-                        <label class="form-check-label" for="languageEn">English</label>
-
-                        <input class="form-check-input" type="checkbox" id="languageFn" value="onsite">
-                        <label class="form-check-label" for="languageFn">French</label>
+                        <form name="language" >
+                            <div id="msgLanguage"> </div>
+                            <div>
+                                <input type="checkbox" name="language[]" value="English" id="languageEn"> English
+                                <input type="checkbox" name="language[]" value="French" id="languageFn"> French
+                            </div>
+                        </form>
 
                     </li>
                 </ul>
