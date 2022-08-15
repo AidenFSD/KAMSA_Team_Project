@@ -1,124 +1,109 @@
 function subscribeValidation() {
-    checkForFullName();
-    checkForEmail();
+    if (!checkInput("fullName")){
+        return false;
+    } else if (!checkInput("email")) {
+        return false;
+    }
+    alert("Thanks for subscribe!")
+    return true;
 }
 
 function careerValidation() {
-    checkForFirstName();
-    checkForLastName();
-    checkForEmail();
-    chceckForPhone();
-    checkForCity();
-    checkForJobType();
-    checkForFileNull();
-    checkForWorkPlace();
-    checkForLanguage();
+    if (!checkInput("first_name")){
+        return false;
+    } else if (!checkInput("last_name")) {
+        return false;
+    } else if (!checkInput("email")) {
+        return false;
+    } else if (!checkInput("phone")) {
+        return false;
+    } else if (!checkSelect("citySelect")) {
+        return false;
+    } else if (!checkSelect("jobCategorySelect")) {
+        return false;
+    } else if (!checkSelect("jobTypeSelect")) {
+        return false;
+    } else if (!checkForFileNull()) {
+        return false;
+    } else if (!checkCheckbox("workPlace[]")) {
+        return false;
+    } else if (!checkCheckbox("language[]")) {
+        return false;
+    }
+    return true;
 }
 
-function checkForFirstName() {
-    let firstNameField = document.getElementById("first_name");
-    if (firstNameField.value.length === 0) {
-        alert("Please enter your first name");
-        firstNameField.focus();
+function supportValidation() {
+    if (!checkInput("fullName")) {
+        return false;
+    } else if (!checkInput("email")) {
+        return false;
+    } else if (!checkInput("phone")) {
+        return false;
+    } else if (!checkInput("title")) {
+        return false;
+    } else if (!checkInput("myEditor")) {
+        return false;
+    }
+    return true;
+}
+
+function checkInput(id) {
+    let input = document.getElementById(id);
+
+    if (input.value.length === 0) {
+        if (id === "fullName" || id === "first_name" || id === "last_name") {
+            console.log(id);
+            alert("Please enter your name");
+        } else if (id === "email") {
+            alert("Please enter your email");
+        } else if (id === "phone") {
+            alert("Please enter your phone number");
+        } if (id === "title") {
+            alert("Please enter the title");
+        } else if (id === "myEditor") {
+            alert("Please enter the Description");
+        }
+        input.focus();
         // If the user hasn't completed the field,
         // changes its background color to yellow
-        firstNameField.style.background = "yellow";
+        input.style.background = "yellow";
         return false;
+    }
+
+    if (id === "email") {
+        let emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
+        if (!(input.value.match(emailCorrectPattern))) {
+            alert('Please enter a valid email address');
+            input.focus();
+            input.style.background = 'lightgreen';
+            return false;
+        }
+    } else if (id === "phone") {
+        let phoneCorrectPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+
+        if (!(input.value.match(phoneCorrectPattern))) {
+            alert('Please enter a valid Phone number');
+            input.focus();
+            input.style.background = 'lightgreen';
+            return false;
+        }
     }
     // After the user completes the field,
     // restores the background color to white
-    firstNameField.style.background = "white";
-
+    input.style.background = "white";
+    return true;
 } // end function checkForLastName
 
-function checkForLastName() {
-    let lastNameField = document.getElementById("last_name");
-    if (lastNameField.value.length === 0) {
-        alert("Please enter your last name");
-        lastNameField.focus();
-        // If the user hasn't completed the field,
-        // changes its background color to yellow
-        lastNameField.style.background = "yellow";
+function checkSelect(id) {
+    let selectedField = document.getElementById(id);
+    if(selectedField.value === ""){
+        alert('Please Select a Option');
+        selectedField.style.background = "yellow";
         return false;
     }
-    // After the user completes the field,
-    // restores the background color to white
-    lastNameField.style.background = "white";
-
-} // end function checkForLastName
-
-function checkForFullName() {
-    let fullNameField = document.getElementById("fullName");
-    if (fullNameField.value.length === 0) {
-        alert("Please enter your name");
-        fullNameField.focus();
-        // If the user hasn't completed the field,
-        // changes its background color to yellow
-        fullNameField.style.background = "yellow";
-        return false;
-    }
-    // After the user completes the field,
-    // restores the background color to white
-    fullNameField.style.background = "white";
-
-} // end function checkForLastName
-
-function checkForEmail() {
-    let emailField = document.getElementById("email");
-
-    var emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
-
-
-    if (emailField.value.length === 0) {
-        alert('Please enter your email address');
-        return false;
-    }
-
-    if (!(emailField.value.match(emailCorrectPattern))) {
-        alert('Please enter a valid email address');
-        emailField.focus();
-        emailField.style.background = 'light green';
-        return false;
-    }
-    // After the user completes the field,
-    // restores the background color to white
-    emailField.style.background = "white";
-}
-
-function chceckForPhone(){
-    let phoneField = document.getElementById("phone");
-    var phoneCorrectPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-
-    if (phoneField.value.length === 0) {
-        alert('Please enter your phone number');
-        return false;
-    }
-
-    if (!(phoneField.value.match(phoneCorrectPattern))) {
-        alert('Please enter a valid Phone number');
-        phoneField.focus();
-        phoneField.style.background = 'light green';
-        return false;
-    }
-    // After the user completes the field,
-    // restores the background color to white
-    phoneField.style.background = "white";
-}
-
-function checkForCity() {
-    let cityField = document.getElementById("citySelect");
-    if(cityField.value === ""){
-        alert('Please Select a city');
-        return false;
-    }
-}
-
-function checkForJobType() {
-    let jobTypeField = document.getElementById("jobTypeSelect");
-    if(jobTypeField.value === ""){
-        alert('Please Select a Job Type');
-        return false;
-    }
+    selectedField.style.background = "white";
+    return true;
 }
 
 function checkForFileValidation(){
@@ -130,9 +115,12 @@ function checkForFileValidation(){
 
     if(!allowExtensions.exec(filePath)) {
         alert('Invalid file type');
+        fileField.style.background = "yellow";
         fileField.value = '';
         return false;
     }
+    fileField.style.background = "white";
+    return true;
 }
 
 function checkForFileNull(){
@@ -141,48 +129,32 @@ function checkForFileNull(){
 
     if (filePath.length === 0) {
         alert('Please upload your file');
+        fileField.style.background = "yellow";
         return false;
     }
+
+    fileField.style.background = "white";
+
+    return checkForFileValidation();
 }
 
+function checkCheckbox(id) {
+    let checkbox = document.getElementsByName(id);
+    let counter = 0;
 
-function checkForWorkPlace() {
-
-    var workPlace=  document.getElementsByName("workPlace[]");
-
-    var checkedWorkPlace = 0;
-
-    for (var i = 0; i < workPlace.length; i++) {
-        if (workPlace[i].checked) {
-            checkedWorkPlace++;
+    for (let i = 0; i < checkbox.length; i++) {
+        if (checkbox[i].checked) {
+            counter++;
         }
     }
 
-    if (checkedWorkPlace == 0) {
-        alert('Please check your prefer work place');
-        document.getElementById("msgWorkPlace").innerHTML = "WorkPlace is required field!";
-        return false;
-    }
-    return true;
-}
-
-
-function checkForLanguage() {
-
-    var languageAvailabilities=  document.getElementsByName("language[]");
-
-    var checkedlanguage = 0;
-
-    for (var i = 0; i < languageAvailabilities.length; i++) {
-        if (languageAvailabilities[i].checked) {
-            checkedlanguage++;
+    if (counter === 0) {
+        alert('Please check your prefer options');
+        for (let i = 0; i < checkbox.length; i++) {
+            checkbox[i].style.scale = '2';
         }
-    }
-
-    if (checkedlanguage == 0) {
-        alert('Please check your language');
-        document.getElementById("msgLanguage").innerHTML = "language is required field!";
         return false;
     }
+
     return true;
 }

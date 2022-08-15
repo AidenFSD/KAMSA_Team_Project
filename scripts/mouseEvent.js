@@ -7,9 +7,11 @@
 
 const mouseOverEvent = className => {
     document.querySelectorAll(className).forEach((places) => {
-        places.style.backgroundColor = 'indianred';
+        places.style.backgroundColor = '#9ACBFF';
         places.style.color = 'white';
-        places.style.border = 'none';
+        places.style.cursor = 'pointer';
+        places.style.transform = 'scale(1.1)';
+        places.style.transition = '0.5s'
     });
 };
 
@@ -17,7 +19,7 @@ const mouseOutEvent = className => {
     document.querySelectorAll(className).forEach((places) => {
         places.style.backgroundColor = 'white';
         places.style.color = 'black';
-        places.style.border = '1px solid black';
+        places.style.transform = 'scale(1)';
     });
 }
 

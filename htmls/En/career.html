@@ -41,7 +41,6 @@
 
     <script>
         const setLocalStorage = () => {
-            careerValidation();
             if (typeof(Storage) !== "undefined") {
                 let firstName = document.getElementById("first_name").value;
                 let lastName = document.getElementById("last_name").value;
@@ -89,7 +88,7 @@
 
 <!-- Body -->
 <div id="body__container">
-    <form class="support_container" action="checkCareer.html">
+    <form class="support_container" onsubmit="return careerValidation()" action="checkCareer.html">
         <div class="panel panel-default" style="margin: 20px">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Career</h2>
@@ -153,34 +152,31 @@
                     </li>
                     <li class="form-inline">
                         <label for="formFile" class="form-label">CV File</label>
-                        <input class="form-control" type="file" id="formFile" onchange="return checkForFileValidation()">
+                        <input class="form-control" type="file" id="formFile">
                     </li>
                     <li class="form-inline">
-                        <label>Workplace</label>
-                        <form name="workPlace" onfocusout="checkForWorkPlace();">
-                            <div id="msgWorkPlace"> </div>
+                        <form>
                             <div>
-                                <input type="checkbox" name="workPlace[]" value="Remote" id="workTypeRemote"> Remote
-                                <input type="checkbox" name="workPlace[]" value="onsite" id="workTypeOnsite"> On-Site
+                                <label>Workplace</label>
+                                <label for="workTypeRemote" style="cursor: pointer"><input type="checkbox" name="workPlace[]" value="Remote" id="workTypeRemote"> Remote </label>
+                                <label for="workTypeOnsite" style="cursor: pointer"><input type="checkbox" name="workPlace[]" value="onsite" id="workTypeOnsite"> On-Site </label>
                             </div>
                         </form>
                     </li>
 
                     <li class="form-inline">
-                        <label>Language</label>
-                        <form name="language" >
-                            <div id="msgLanguage"> </div>
+                        <form>
                             <div>
-                                <input type="checkbox" name="language[]" value="English" id="languageEn"> English
-                                <input type="checkbox" name="language[]" value="French" id="languageFn"> French
+                                <label>Language</label>
+                                <label for="languageEn" style="cursor: pointer"><input type="checkbox" name="language[]" value="English" id="languageEn"> English </label>
+                                <label for="languageFn" style="cursor: pointer"><input type="checkbox" name="language[]" value="French" id="languageFn"> French </label>
                             </div>
                         </form>
-
                     </li>
                 </ul>
 
                 <div class="btnForm">
-                    <button class="btn btn-lg btn-success btn-block" onclick="setLocalStorage()">NEXT</button>
+                    <button type="submit" class="btn btn-lg btn-success btn-block" onclick="setLocalStorage()">NEXT</button>
                     <button class="btn btn-lg btn-success btn-block" formaction="career.html">CLEAR</button>
                 </div>
             </div>

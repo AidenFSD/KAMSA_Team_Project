@@ -427,6 +427,7 @@ footer .btn {
     border-radius: 50%;
 }
 
+/* World Map*/
 #worldMap {
     position: relative;
     height: 371px;
@@ -434,116 +435,158 @@ footer .btn {
     margin: 0 auto;
 }
 
-#world input {
-    width: 80px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle;
+#world #worldMap input {
+    border: none;
     opacity: 0.7;
 }
 
 #place1 {
     position: absolute;
-    margin-top: 160px;
-    margin-left: 90px;
+    margin-top: 130px;
+    margin-left: 110px;
 }
 
 #place2 {
     position: absolute;
-    margin-top: 120px;
-    margin-left: 430px;
+    margin-top: 100px;
+    margin-left: 460px;
 }
 
 #place3 {
     position: absolute;
-    margin-top: 150px;
-    margin-left: 480px;
+    margin-top: 120px;
+    margin-left: 510px;
 }
 
 #place4 {
     position: absolute;
-    margin-top: 170px;
-    margin-left: 540px;
+    margin-top: 140px;
+    margin-left: 550px;
 }
 
-#map {
-    max-width: inherit;
-    border-radius: 10%;
+@media (max-width: 630px) {
+    #mapContainer {
+        display: none;
+    }
+    #worldMap {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+
+    }
+
+    #mapUSA, #mapChina, #mapKorea, #mapJapan {
+        margin: 0 10px;
+        padding: 20px;
+        text-align: center;
+        display: inline-block;
+        background-color: whitesmoke;
+        opacity: 1;
+    }
+
+    #place1, #place2, #place3, #place4 {
+        position: static;
+        margin: 0 auto;
+        scale: 1.5;
+    }
+}
+
+#mapContainer {
+    background-color: whitesmoke;
+    border-radius: 40%;
+    overflow: hidden;
+}
+
+#map{
+    max-width: 100%;
+    height: auto;
+    border-radius: 40%;
 }
 
 #world table {
     width: auto;
     margin: 0 auto;
-    border-spacing: 5px 10px;
+    border-spacing: 10px 10px;
     border-collapse: separate;
 }
 
-#world th {
+#world #companyWorld ul {
     text-align: center;
     vertical-align: middle;
     padding: 5px;
-    width: 150px;
+}
+#world #companyWorld li {
+    width: 130px;
     height: 100px;
+    display: inline-block;
+}
+
+#world #country ul {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+#world #country li {
+    min-width: 230px;
+    min-height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 50px;
+    margin: 10px;
 }
 
 #name1 {
-
     background-image: url(../images/kickstarter.png);
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: contain;
     background-position: center;
 }
 
 #name2 {
-    background-image: url(../images/indeigogo.png);
+    background-image: url(../images/indiegogo.png);
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: contain;
     background-position: center;
 }
 
 #name3 {
-
     background-image: url(../images/taobao.png);
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: contain;
     background-position: center;
 }
 
 #name4 {
     background-image: url(../images/wadiz.png);
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: contain;
     background-position: center;
 }
 
 #name5 {
-
     background-image: url(../images/makuake.png);
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: contain;
     background-position: center;
 }
 
 #name6 {
-    background-image: url(../images/campfire.png);
+    background-image: url(../images/campfire.svg);
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: contain;
     background-position: center;
 }
 
 
-#world td {
-    /*border: solid 1px black;*/
-    border-radius: 30%;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5px;
-}
+
 
 #services {
     margin: 22px auto 0;
     max-width: 1000px;
-    /*border: dotted 1px blue;*/
     border-radius: 10%;
 }
 
