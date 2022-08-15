@@ -33,6 +33,7 @@
     <script defer src="../../scripts/main.js"></script>
     <script src="../../scripts/includeHTMLs.js"></script>
     <script src="../../scripts/scripts.js"></script>
+    <script src="../../scripts/validation.js" defer></script>
 
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -41,31 +42,46 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../scripts/summernote-lite.js"></script>
+
+    <script>
+        const setLocalStorage = () => {
+            if (typeof(Storage) !== "undefined") {
+                let name = document.getElementById("fullName").value;
+                let email = document.getElementById("email").value;
+                let phone = document.getElementById("phone").value;
+                let title = document.getElementById("title").value;
+                let description = document.getElementById("myEditor").value;
+
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("phone", phone);
+                localStorage.setItem("title", title);
+                localStorage.setItem("description", description);
+            } else {
+                console.log("Storage is not working");
+            }
+        }
+    </script>
 </head>
 <body>
     <!--HEADER-->
     <div include-html="headerFr.html"></div>
     <!-- Body -->
     <div id="body__container">
-        <form class="support_container" action="../En/complete.html" style="margin-top: 40px">
+        <form class="support_container" onsubmit="return supportValidation()" action="checkSupportFr.html" style="margin-top: 40px">
             <div class="card" style="width: 100%; margin-top: 20px;">
                 <div class="card-header">
                     Nous contacter
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><input type="text" class="form-control" placeholder="Nom" id="name"></li>
-                    <li class="list-group-item"><input type="email" class="form-control" placeholder="Courriel Address"
-                                                       id="email">
-                    </li>
-                    <li class="list-group-item"><input type="tel" class="form-control"
-                                                       placeholder="Entrez le numéro de téléphone" id="phone"></li>
-                    <li class="list-group-item"><input type="text" class="form-control" placeholder="Entrez le titre"
-                                                       id="title"></li>
-                    <li class="list-group-item"><textarea name="" id="myEditor" class="form-control" cols="30" rows="10"
-                                                          placeholder="Description"></textarea></li>
+                    <li class="list-group-item"><input type="text" class="form-control" placeholder="Nom" id="fullName"></li>
+                    <li class="list-group-item"><input type="email" class="form-control" placeholder="Courriel Address" id="email"></li>
+                    <li class="list-group-item"><input type="tel" class="form-control" placeholder="Entrez le numéro de téléphone" id="phone"></li>
+                    <li class="list-group-item"><input type="text" class="form-control" placeholder="Entrez le titre" id="title"></li>
+                    <li class="list-group-item"><textarea name="" id="myEditor" class="form-control" cols="30" rows="10" placeholder="Description"></textarea></li>
                 </ul>
                 <div class="btnForm">
-                    <button class="btn btn-lg btn-success btn-block">SUBMIT</button>
+                    <button class="btn btn-lg btn-success btn-block" onsubmit="setLocalStorage()">NEXT</button>
                     <button class="btn btn-lg btn-success btn-block" formaction="support.html">CANCEL</button>
                 </div>
             </div>

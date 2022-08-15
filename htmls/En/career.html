@@ -83,113 +83,117 @@
     </script>
 </head>
 <body>
-<!--HEADER-->
-<div include-html="header.html"></div>
+    <!--HEADER-->
+    <div include-html="header.html"></div>
 
-<!-- Body -->
-<div id="body__container">
-    <form class="support_container" onsubmit="return careerValidation()" action="checkCareer.html">
-        <div class="panel panel-default" style="margin: 20px">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Career</h2>
+    <!-- Body -->
+    <div id="body__container">
+        <form class="support_container" onsubmit="return careerValidation()" action="checkCareer.html">
+            <div class="panel panel-default" style="margin: 20px">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Career</h2>
 
-            </div>
-            <div class="panel-body">
+                </div>
+                <div class="panel-body">
 
-                <ul>
-                    <li class="form-inline ">
-                        <label for="first_name">First Name</label>
-                        <input type="text" class="form-control" placeholder="First Name" id="first_name">
-                    </li>
-                    <li class="form-inline">
-                        <label for="last_name">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last Name" id="last_name">
-                    </li>
-                    <li class="form-inline">
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control" placeholder="E-Mail Address" id="email">
+                    <ul>
+                        <li class="form-inline ">
+                            <label for="first_name">First Name</label>
+                            <input type="text" class="form-control" placeholder="First Name" id="first_name">
+                        </li>
+                        <li class="form-inline">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Last Name" id="last_name">
+                        </li>
+                        <li class="form-inline">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" placeholder="E-Mail Address" id="email">
 
-                    </li>
-                    <li class="form-inline">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" placeholder="Enter phone number" id="phone">
-                    </li>
-                    <li class="form-inline">
-                        <label>CITY : </label>
-                        <label style="width: 100%">
-                            <select ng-model='discussionsSelect' id="citySelect" class='form-control'>
-                                <option value="" disabled selected>Choose City</option>
-                                <option value="Vancouver">Vancouver, BC</option>
-                                <option value="Montreal">Montreal, QC</option>
-                                <option value="Ottawa">Ottawa, ON</option>
-                                <option value="Toronto">Toronto, ON</option>
-                            </select>
-                        </label>
-                    </li>
+                        </li>
+                        <li class="form-inline">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter phone number" id="phone">
+                        </li>
+                        <li class="form-inline">
+                            <label>CITY</label>
+                            <label style="width: 100%">
+                                <select ng-model='discussionsSelect' id="citySelect" class='form-control'>
+                                    <option value="" disabled selected>Choose City</option>
+                                    <option value="Vancouver">Vancouver, BC</option>
+                                    <option value="Montreal">Montreal, QC</option>
+                                    <option value="Ottawa">Ottawa, ON</option>
+                                    <option value="Toronto">Toronto, ON</option>
+                                </select>
+                            </label>
+                        </li>
 
-                    <li class="form-inline">
-                        <label>Job Category : </label>
-                        <label style="width: 100%">
-                            <select ng-model='discussionsSelect' id="jobCategorySelect" class='form-control'>
-                                <option value="" disabled selected>Choose Job Category</option>
-                                <option value="Software Development">Software Development</option>
-                                <option value="Design">Design</option>
-                                <option value="Marketing">Marketing</option>
-                                <option value="Customer Service">Customer Service</option>
-                            </select>
-                        </label>
-                    </li>
+                        <li class="form-inline">
+                            <label>Job Category</label>
+                            <label style="width: 100%">
+                                <select ng-model='discussionsSelect' id="jobCategorySelect" class='form-control'>
+                                    <option value="" disabled selected>Choose Job Category</option>
+                                    <option value="Software Development">Software Development</option>
+                                    <option value="Design">Design</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Customer Service">Customer Service</option>
+                                </select>
+                            </label>
+                        </li>
 
-                    <li class="form-inline">
-                        <label>Job Type</label>
-                        <label style="width: 100%">
-                            <select ng-model='discussionsSelect' id="jobTypeSelect" class='form-control'>
-                                <option value="" disabled selected>Choose Job Type</option>
-                                <option value="Full Time">Full Time</option>
-                                <option value="Part Time">Part Time</option>
-                            </select>
-                        </label>
-                    </li>
-                    <li class="form-inline">
-                        <label for="formFile" class="form-label">CV File</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </li>
-                    <li class="form-inline">
-                        <form>
-                            <div>
-                                <label>Workplace</label>
-                                <label for="workTypeRemote" style="cursor: pointer"><input type="checkbox" name="workPlace[]" value="Remote" id="workTypeRemote"> Remote </label>
-                                <label for="workTypeOnsite" style="cursor: pointer"><input type="checkbox" name="workPlace[]" value="onsite" id="workTypeOnsite"> On-Site </label>
-                            </div>
-                        </form>
-                    </li>
+                        <li class="form-inline">
+                            <label>Job Type</label>
+                            <label style="width: 100%">
+                                <select ng-model='discussionsSelect' id="jobTypeSelect" class='form-control'>
+                                    <option value="" disabled selected>Choose Job Type</option>
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Part Time">Part Time</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="form-inline">
+                            <label for="formFile" class="form-label">CV File</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </li>
+                        <li class="form-inline">
+                            <form>
+                                <div>
+                                    <label>Workplace</label>
+                                    <label for="workTypeRemote" style="cursor: pointer; width:auto">
+                                        <input type="checkbox" name="workPlace[]" value="Remote" id="workTypeRemote"> Remote </label>
+                                    <label for="workTypeOnsite" style="cursor: pointer; width:auto">
+                                        <input type="checkbox" name="workPlace[]" value="onsite" id="workTypeOnsite"> On-Site </label>
+                                </div>
+                            </form>
+                        </li>
 
-                    <li class="form-inline">
-                        <form>
-                            <div>
-                                <label>Language</label>
-                                <label for="languageEn" style="cursor: pointer"><input type="checkbox" name="language[]" value="English" id="languageEn"> English </label>
-                                <label for="languageFn" style="cursor: pointer"><input type="checkbox" name="language[]" value="French" id="languageFn"> French </label>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
+                        <li class="form-inline">
+                            <form>
+                                <div>
+                                    <label>Language</label>
+                                    <label for="languageEn" style="cursor: pointer; width:auto">
+                                        <input type="checkbox" name="language[]" value="English" id="languageEn"> English </label>
+                                    <label for="languageFn" style="cursor: pointer; width:auto">
+                                        <input type="checkbox" name="language[]" value="French" id="languageFn"> French </label>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
 
-                <div class="btnForm">
-                    <button type="submit" class="btn btn-lg btn-success btn-block" onclick="setLocalStorage()">NEXT</button>
-                    <button class="btn btn-lg btn-success btn-block" formaction="career.html">CLEAR</button>
+                    <div class="btnForm">
+                        <button type="submit" class="btn btn-lg btn-success btn-block" onclick="setLocalStorage()">NEXT</button>
+                        <button class="btn btn-lg btn-success btn-block" formaction="career.html">CLEAR</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
 
-</div>
+    </div>
 
-<!--FOOTER-->
-<div include-html="footer.html"></div>
+    <!--FOOTER-->
+    <div include-html="footer.html"></div>
 
-<script>
-    includeHTML();
-</script>
+    <script>
+        includeHTML();
+    </script>
 </body>
 </html>

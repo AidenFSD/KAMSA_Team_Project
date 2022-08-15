@@ -31,7 +31,7 @@
     <script src="../../scripts/main.js" defer></script>
     <script src="../../scripts/includeHTMLs.js"></script>
     <script src="../../scripts/scripts.js" defer></script>
-    <script src="../../scripts/mouseEvent.js" defer></script>
+    <script src="../../scripts/validation.js" defer></script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -39,220 +39,101 @@
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <script>
-        'use strict';
-
-        function worldClock() {
-            let placeUSA = document.getElementById('place1');
-            placeUSA.value = 'USA';
-
-            let placeChina = document.getElementById('place2');
-            placeChina.value = 'CHINA';
-
-            let placeKorea = document.getElementById('place3');
-            placeKorea.value = 'KOREA';
-
-            let placeJapan = document.getElementById('place4');
-            placeJapan.value = 'JAPAN';
-
-            let nameHouston = document.getElementById('name1');
-            let officeHouston = document.getElementById('Kickstarter');
-            placeUSA.onmouseover = nameHouston.onmouseover = officeHouston.onmouseover = function () {
-                mouseOverEvent('.usa');
-            }
-            placeUSA.onmouseout = nameHouston.onmouseout = officeHouston.onmouseout = function () {
-                mouseOutEvent('.usa');
-            }
-
-            let nameLondon = document.getElementById('name2');
-            let officeLondon = document.getElementById('Indiegogo');
-            placeUSA.onmouseover = nameLondon.onmouseover = officeLondon.onmouseover = function () {
-                mouseOverEvent('.usa');
-            }
-            placeUSA.onmouseout = nameLondon.onmouseout = officeLondon.onmouseout = function () {
-                mouseOutEvent('.usa');
-            }
-
-            let nameNewYork = document.getElementById('name3');
-            let officeNewYork = document.getElementById('Taobao');
-            placeChina.onmouseover = nameNewYork.onmouseover = officeNewYork.onmouseover = function () {
-                mouseOverEvent('.china');
-            }
-            placeChina.onmouseout = nameNewYork.onmouseout = officeNewYork.onmouseout = function () {
-                mouseOutEvent('.china');
-            }
-
-            let nameSeattle = document.getElementById('name4');
-            let officeSeattle = document.getElementById('Wadiz');
-            placeKorea.onmouseover = nameSeattle.onmouseover = officeSeattle.onmouseover = function () {
-                mouseOverEvent('.korea');
-            }
-            placeKorea.onmouseout = nameSeattle.onmouseout = officeSeattle.onmouseout = function () {
-                mouseOutEvent('.korea');
-            }
-
-            let nameSydney = document.getElementById('name5');
-            let officeSydney = document.getElementById('Sydney_Office');
-            placeJapan.onmouseover = nameSydney.onmouseover = officeSydney.onmouseover = function () {
-                mouseOverEvent('.japan');
-            }
-            placeJapan.onmouseout = nameSydney.onmouseout = officeSydney.onmouseout = function () {
-                mouseOutEvent('.japan');
-            }
-
-            let nameTokyo = document.getElementById('name6');
-            let officeTokyo = document.getElementById('Tokyo_Office');
-            placeJapan.onmouseover = nameTokyo.onmouseover = officeTokyo.onmouseover = function () {
-                mouseOverEvent('.japan');
-            }
-            placeJapan.onmouseout = nameTokyo.onmouseout = officeTokyo.onmouseout = function () {
-                mouseOutEvent('.japan');
-            }
-        }
-    </script>
 </head>
-<body onload="worldClock();">
-<!--HEADER-->
-<div include-html="headerFr.html"></div>
+<body onload="window.setInterval('changeBG()',3000)">
+    <!--HEADER-->
+        <div include-html="headerFr.html"></div>
 
-<!-- BODY -->
-<div id="body__container">
-    <!--VISUAL-->
-    <section class="section section--visual">
-        <div class="inner">
+    <!-- BODY -->
+    <div id="body__container">
+        <!--VISUAL-->
+        <section class="section section--visual" id="visual">
+            <script>
+                // declare a default variable
+                let currentBG = 'background1';
+                let target = document.getElementById('visual');
+                // create changeSign function
+                function changeBG() {
+                    // check the status of the currentSign
+                    if (currentBG === 'background1') {
+                        // switch images
+                        target.style.backgroundImage = 'url("https://gentlelemur.speedgabia.com/petbedCA/mainbg_2.jpeg")';
+
+                        // change the current sign value to on
+                        currentBG = 'background2';
+                    } else if(currentBG === 'background2'){
+                        // switch images
+                        target.style.backgroundImage = 'url("https://gentlelemur.speedgabia.com/petbedCA/mainbg_3.png")';
+                        // change the current sign value to on
+                        currentBG = 'background3';
+                    }else if(currentBG === 'background3'){
+                        // switch images
+                        target.style.backgroundImage = 'url("https://gentlelemur.speedgabia.com/petbedCA/mainbg_4.png")';
+                        // change the current sign value to on
+                        currentBG = 'background4';
+                    }else{
+                        currentBG = 'background1';
+                        target.style.backgroundImage = 'url("https://gentlelemur.speedgabia.com/petbedCA/bg_pets.png")';
+                    }
+
+                }
+            </script>
+            <div class="inner">
+                <div class="summary">
+                    <h2 class="summary__title">Plus d'inconfort pour eux,
+                        <br>Plus de mess pour vous.</h2>
+                    <p class="summary__description">
+                        Le lit pour animaux de compagnie Gentle Lemur est le seul lit pour animaux de compagnie en mousse à
+                        mémoire ultra-dense sur le marché qui est vraiment lavable à l'intérieur et à l'extérieur. Le lit
+                        est nettoyé et séché presque instantanément. <br>
+                    </p>
+                </div>
+
+                <form id="sign-form" onsubmit="return subscribeValidation()">
+                    <ul>
+                        <li><label style="width: 100%">
+                            <input class="input--text" id="fullName" type="text" placeholder="Choisis un nom d'utilisateur">
+                        </label></li>
+                        <li><label style="width: 100%">
+                            <input class="input--text" id="email" type="email" placeholder="Votre adresse e-mail">
+                        </label></li>
+                        <li>
+                            <button class="btn btn-subscribe" type="submit" id="submitButton">Abonnez-vous à notre newsletter</button>
+                            <p class="caption">En cliquant sur "S'abonner à notre newsletter", vous acceptez nos conditions
+                                d'utilisation et notre politique de confidentialité.
+                                Nous vous enverrons occasionnellement des e-mails liés à votre compte.</p>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </section>
+
+        <!--FEATURE-->
+        <section class="section section--feature">
 
             <div class="summary">
-                <h2 class="summary__title">Plus d'inconfort pour eux,
-                    <br>Plus de mess pour vous.</h2>
-                <p class="summary__description">
-                    Le lit pour animaux de compagnie Gentle Lemur est le seul lit pour animaux de compagnie en mousse à
-                    mémoire ultra-dense sur le marché qui est vraiment lavable à l'intérieur et à l'extérieur. Le lit
-                    est nettoyé et séché presque instantanément. <br>
-                </p>
+                <h2 class="summary__title">Ultra confort qui nettoie instantanément</h2>
+                <p class="summary__description"> La structure 3D unique en forme de nid est conçue orthopédiquement pour
+                    répondre aux comportements naturels des chiens et des chats et leur apporte un confort sans
+                    précédent.</p>
             </div>
 
-            <form id="sign-form" action="../En/complete.html">
-                <ul>
-                    <li><label style="width: 100%">
-                        <input class="input--text" type="text" placeholder="Choisis un nom d'utilisateur">
-                    </label></li>
-                    <li><label style="width: 100%">
-                        <input class="input--text" type="email" placeholder="Votre adresse e-mail">
-                    </label></li>
-                    <li>
-                        <button class="btn btn-subscribe" type="submit">Abonnez-vous à notre newsletter</button>
-                        <p class="caption">En cliquant sur "S'abonner à notre newsletter", vous acceptez nos conditions
-                            d'utilisation et notre politique de confidentialité.
-                            Nous vous enverrons occasionnellement des e-mails liés à votre compte.</p>
-                    </li>
-                </ul>
-            </form>
-
-        </div>
-    </section>
-
-    <section class="section section--feature">
-        <div id="world">
-            <div id="worldMap">
-                <input id="place1" class="usa" name="place1" size="7" readonly/>
-                <input id="place2" class="china" name="place2" size="7" readonly/>
-                <input id="place3" class="korea" name="place3" size="7" readonly/>
-                <input id="place4" class="japan" name="place4" size="7" readonly/>
-                <img src="../../images/map.jpg" alt="World Map" id="map" width="655" height="371"/>
+            <div class="video">
+                <div class="video-ratio">
+                    <iframe width="764" height="430" src="https://www.youtube.com/embed/7Yluja0Zlsk"
+                            title="Gentle Lemur Pet Bed"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
             </div>
-            <table>
-                <tr>
-                    <th id="name1" class="usa">Kickstarter</th>
-                    <th id="name2" class="usa">Indiegogo</th>
-                    <th id="name3" class="china">Taobao</th>
-                    <th id="name4" class="korea">Wadiz</th>
-                    <th id="name5" class="japan">Sydney</th>
-                    <th id="name6" class="japan">Tokyo</th>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td id="Kickstarter" class="usa">
-                        <p>
-                            <b>Jackson Electronics USA</b>
-                            <br/>10010 Park Street
-                            <br/>New York NY 10001
-                        </p>
-                    </td>
 
-                    <td id="Indiegogo" class="usa">
-                        <p>
-                            <b>Jackson Electronics Ltd.</b>
-                            <br/>2349 Mitchell Street
-                            <br/>Seattle, WA 65091
-                        </p>
-                    </td>
+        </section>
+    </div>
 
-                    <td id="Taobao" class="china">
-                        <p>
-                            <b>Jackson Electronics</b>
-                            <br/>5150 Shasta Lane
-                            <br/>Houston, TX 32821
-                        </p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td id="Wadiz" class="korea">
-                        <p>
-                            <b>Jackson Electronics</b>
-                            <br/>18 Northland Avenue
-                            <br/>London, England WC2N 5EA
-                        </p>
-                    </td>
-
-                    <td id="Sydney_Office" class="japan">
-                        <p>
-                            <b>Jackson Electronics</b>
-                            <br/>171-105 Thomas Street
-                            <br/>Sydney NSW 2000, Australia
-                        </p>
-                    </td>
-
-                    <td id="Tokyo_Office" class="japan">
-                        <p>
-                            <b>Jackson Electronics</b>
-                            <br/>1-2-99 Sumiyoshi
-                            <br/>Tokyo 140-8781 Japan
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
-    <!--FEATURE-->
-    <section class="section section--feature">
-
-        <div class="summary">
-            <h2 class="summary__title">Ultra confort qui nettoie instantanément</h2>
-            <p class="summary__description"> La structure 3D unique en forme de nid est conçue orthopédiquement pour
-                répondre aux comportements naturels des chiens et des chats et leur apporte un confort sans
-                précédent.</p>
-        </div>
-
-        <div class="video">
-            <div class="video-ratio">
-                <iframe width="764" height="430" src="https://www.youtube.com/embed/7Yluja0Zlsk"
-                        title="Gentle Lemur Pet Bed"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-            </div>
-        </div>
-
-    </section>
-</div>
-
-<!--FOOTER-->
-<div include-html="footerFr.html"></div>
-<script>
-    includeHTML();
-</script>
+    <!--FOOTER-->
+    <div include-html="footerFr.html"></div>
+    <script>
+        includeHTML();
+    </script>
 </body>
 </html>

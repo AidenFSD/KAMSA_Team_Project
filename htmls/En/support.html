@@ -64,52 +64,50 @@
     </script>
 </head>
 <body>
-<!--HEADER-->
-<div include-html="header.html"></div>
-<!-- Body -->
-<div id="body__container">
-    <form class="support_container" onsubmit="return supportValidation()" action="checkSupport.html" style = "margin-top: 40px">
-        <div class="card" style="width: 100%; margin-top: 20px;" >
-            <div class="card-header">
-                Contact Us
+    <!--HEADER-->
+    <div include-html="header.html"></div>
+    <!-- Body -->
+    <div id="body__container">
+        <form class="support_container" onsubmit="return supportValidation()" action="checkSupport.html" style = "margin-top: 40px">
+            <div class="card" style="width: 100%; margin-top: 20px;" >
+                <div class="card-header">
+                    Contact Us
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><input type="text" class="form-control" placeholder="Name" id="fullName"></li>
+                    <li class="list-group-item"><input type="email" class="form-control" placeholder="E-Mail Address" id="email"></li>
+                    <li class="list-group-item"><input type="tel" class="form-control" placeholder="Enter phone number" id="phone"></li>
+                    <li class="list-group-item"><input type="text" class="form-control" placeholder="Enter the Title" id="title"></li>
+                    <li class="list-group-item"><textarea name="" id="myEditor" class="form-control" ></textarea></li>
+                </ul>
+                <div class="btnForm">
+                    <button class="btn btn-lg btn-success btn-block" onclick="setLocalStorage()">NEXT</button>
+                    <button class="btn btn-lg btn-success btn-block" formaction="support.html">CANCEL</button>
+                </div>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"> <input type="text" class="form-control" placeholder="Name" id="fullName"></li>
-                <li class="list-group-item"><input type="email" class="form-control" placeholder="E-Mail Address" id="email">
-                </li>
-                <li class="list-group-item"> <input type="tel" class="form-control" placeholder="Enter phone number" id="phone"></li>
-                <li class="list-group-item"> <input type="text" class="form-control" placeholder="Enter the Title" id="title"></li>
-                <li class="list-group-item">  <textarea name="" id="myEditor" class="form-control" ></textarea></li>
-            </ul>
-            <div class="btnForm">
-                <button class="btn btn-lg btn-success btn-block" onclick="setLocalStorage()">NEXT</button>
-                <button class="btn btn-lg btn-success btn-block" formaction="support.html">CANCEL</button>
-            </div>
-        </div>
-    </form>
+        </form>
 
-</div>
+    </div>
 
 
-<!--FOOTER-->
-<div include-html="footer.html"></div>
-<script>
-    includeHTML();
-</script>
+    <!--FOOTER-->
+    <div include-html="footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
 
+    <script>
+        $(document).ready(function () {
 
-<script>
-    $(document).ready(function () {
-
-        $('#myEditor').summernote({
-            height: 300,
-            minHeight: null,
-            maxHeight:null,
-            focus:true,
-            lang:"en",
-            placeholder : 'Description'
+            $('#myEditor').summernote({
+                height: 300,
+                minHeight: null,
+                maxHeight:null,
+                focus:true,
+                lang:"en",
+                placeholder : 'Description'
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
